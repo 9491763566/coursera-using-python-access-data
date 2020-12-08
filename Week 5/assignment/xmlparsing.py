@@ -5,7 +5,7 @@ import xml.etree.ElementTree as ET
 url = 'http://python-data.dr-chuck.net/comments_217218.xml'
 
 # get the content of the url as a string
-data = urllib.urlopen(url).read()
+data = urllib.request.urlopen(url).read()
 
 # transform the string content into a xml tree
 tree = ET.fromstring(data)
@@ -18,4 +18,4 @@ total = 0
 for count in counts:
     total += int(count.text)
 
-print 'total: ', total
+print( 'total: ', total)
